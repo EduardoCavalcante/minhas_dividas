@@ -1,2 +1,5 @@
 .DS_Store
 backend/.env
+backend/create_enviroment.js
+frontend/create_enviroment.js
+
