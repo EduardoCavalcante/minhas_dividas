@@ -10,3 +10,6 @@ yarn add react
 yarn add react-dom
 yarn add babel-loader -D
 yarn add webpack-dev-server -D
+yarn add style-loader
+yarn add css-loader
+yarn add file-loader
