@@ -1,5 +1,8 @@
 import  React, { Component } from 'react';
 import './login.css';
+import { login } from '../../services/auth';
+
+import api from '../../services/api';
 
 export default class Login extends Component {
     state = {
@@ -16,10 +19,22 @@ export default class Login extends Component {
         this.setState({ password : event.target.value});
     }
 
-    handleSubmit = event => {
+    handleSubmit = async event => {
         event.preventDefault();
-        console.log(this.state.username);
-        console.log(this.state.password);
+        const username = this.state.username;
+        const password = this.state.password
+
+        try {
+            const { data } = await api.post('/sessions', { username, password});
+            login(data.token);
+            localStorage.setItem('user', data.user);
+            this.props.history.push("/debts");
+        } catch(error) {
+            const { response } = error;
+            console.log(response.status);
+        }
+
+
     }
 
 
