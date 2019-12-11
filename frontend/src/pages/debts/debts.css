@@ -1,0 +1,32 @@
+
+table {
+    background: white;
+    border-collapse: collapse;
+    border-radius: 3px;
+}
+
+table tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    border-bottom: 1px solid #f2f2f2;
+
+}
+table td {
+    color: #999;
+    padding: 21px 10px 21px 21px;
+}
+
+table tbody tr:hover {
+    background: #eee;
+}
+
+thead th {
+
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4;
+    text-transform: uppercase;
+    padding: 21px 10px 21px 21px;
+
+}

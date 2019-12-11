@@ -1,8 +1,11 @@
 import React from 'react';
+import Routes from './routes';
+import './app.css';
 
-function App () {
-
-    return <h1>Hello Word!</h1>  
-};
+function App() {
+  return (
+    <Routes />
+  );
+}
 
 export default App;
